@@ -460,10 +460,7 @@ namespace ImageProcessingApp
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -547,6 +544,18 @@ namespace ImageProcessingApp
         {
             if (pictureBox8.Image != null) { pictureBox8.Image.Dispose(); pictureBox8.Image = null; }
             if (pictureBox9.Image != null) { pictureBox9.Image.Dispose(); pictureBox9.Image = null; }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PNG|*.png|JPEG|*.jpg|Bitmap|*.bmp";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                processedImage.Save(sfd.FileName);
+                MessageBox.Show("Image saved successfully!");
+            }
         }
 
 
