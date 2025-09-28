@@ -8,7 +8,7 @@ namespace ImageProcessingApp
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
 
-        private enum WebcamProcessMode { None, Grayscale, Invert, Sepia, Subtract}
+        private enum WebcamProcessMode { None, Grayscale, Invert, Sepia, Subtract }
         private WebcamProcessMode _webcamMode = WebcamProcessMode.None;
 
         Bitmap originalImage;
@@ -192,8 +192,13 @@ namespace ImageProcessingApp
                 MessageBox.Show("Image saved successfully!");
             }
         }
+        private void clearProcessed_1_Click(object sender, EventArgs e)
+        {
+            if (pictureBox2.Image != null) { pictureBox2.Image.Dispose(); pictureBox2.Image = null; }
+            if (pictureBox1.Image != null) { pictureBox1.Image.Dispose(); pictureBox1.Image = null; }
+        }
 
-        /////////////////////////////// Subtraction From ///////////////////////////////
+        /////////////////////////////// Subtraction Form ///////////////////////////////
 
 
         private void button12_Click(object sender, EventArgs e) // Load image (Form 2)
@@ -291,10 +296,8 @@ namespace ImageProcessingApp
         }
 
 
+        /////////////////////////////// WebCam Form ///////////////////////////////
 
-
-
-        /////////////////////////////// WebCam From ///////////////////////////////
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -444,6 +447,108 @@ namespace ImageProcessingApp
             _webcamMode = default;
         }
 
-        
+        private void button20_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.png;*.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                originalImage = new Bitmap(ofd.FileName);
+                processedImage = new Bitmap(originalImage);
+                pictureBox9.Image = originalImage;
+                pictureBox8.Image = null;
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        /////////////////////////////// Convolution Matrix Form ///////////////////////////////
+
+
+        private void Smooth_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.Smooth(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void GaussianBlur_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+
+            // for (int i = 0; i < 100; i++) // test lang kay mild ra kayng blur uie
+            // joke maka spam raman diay ka sa button
+            BitmapFilter.GaussianBlur(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void Sharpen_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.Sharpen(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void MeanRemoval_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.MeanRemoval(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void Emboss_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.Emboss(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void EmbossHorizontalVertical_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.EmbossHorizontalVertical(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void EmbossAllDirections_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.EmbossAllDirections(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void EmbossLossy_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.EmbossLossy(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void EmbossHorizontalOnly_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.EmbossHorizontalOnly(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void EmbossVerticalOnly_Click(object sender, EventArgs e)
+        {
+            if (processedImage == null) return;
+            BitmapFilter.EmbossVerticalOnly(processedImage);
+            pictureBox8.Image = processedImage;
+        }
+
+        private void clearProcessed_Click(object sender, EventArgs e)
+        {
+            if (pictureBox8.Image != null) { pictureBox8.Image.Dispose(); pictureBox8.Image = null; }
+            if (pictureBox9.Image != null) { pictureBox9.Image.Dispose(); pictureBox9.Image = null; }
+        }
+
+
     }
 }

@@ -62,6 +62,26 @@
             label3 = new Label();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
+            tabPage4 = new TabPage();
+            clearProcessed = new Button();
+            EmbossVerticalOnly = new Button();
+            EmbossHorizontalOnly = new Button();
+            label7 = new Label();
+            EmbossLossy = new Button();
+            EmbossAllDirections = new Button();
+            EmbossHorizontalVertical = new Button();
+            label5 = new Label();
+            label6 = new Label();
+            pictureBox8 = new PictureBox();
+            button18 = new Button();
+            Smooth = new Button();
+            button20 = new Button();
+            Emboss = new Button();
+            MeanRemoval = new Button();
+            Sharpen = new Button();
+            GaussianBlur = new Button();
+            pictureBox9 = new PictureBox();
+            clearProcessed_1 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -73,6 +93,9 @@
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -80,6 +103,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(1, 9);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -88,6 +112,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(clearProcessed_1);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(pictureBox2);
@@ -110,25 +135,27 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(858, 5);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(831, 4);
             label2.Name = "label2";
-            label2.Size = new Size(121, 20);
+            label2.Size = new Size(158, 28);
             label2.TabIndex = 34;
             label2.Text = "Processed Image";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(160, 5);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(143, 3);
             label1.Name = "label1";
-            label1.Size = new Size(105, 20);
+            label1.Size = new Size(136, 28);
             label1.TabIndex = 33;
             label1.Text = "Loaded Image";
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.Control;
-            pictureBox2.Location = new Point(704, 25);
+            pictureBox2.Location = new Point(704, 35);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(401, 320);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -209,7 +236,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.Control;
-            pictureBox1.Location = new Point(18, 25);
+            pictureBox1.Location = new Point(18, 35);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(401, 320);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -409,25 +436,27 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(184, 9);
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(166, 9);
             label4.Name = "label4";
-            label4.Size = new Size(69, 20);
+            label4.Size = new Size(91, 28);
             label4.TabIndex = 39;
             label4.Text = "WebCam";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(861, 9);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(840, 9);
             label3.Name = "label3";
-            label3.Size = new Size(121, 20);
+            label3.Size = new Size(158, 28);
             label3.TabIndex = 38;
             label3.Text = "Processed Image";
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = SystemColors.Control;
-            pictureBox6.Location = new Point(707, 29);
+            pictureBox6.Location = new Point(707, 40);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(401, 320);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -437,12 +466,230 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = SystemColors.Control;
-            pictureBox7.Location = new Point(21, 29);
+            pictureBox7.Location = new Point(21, 40);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(401, 320);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox7.TabIndex = 35;
             pictureBox7.TabStop = false;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(clearProcessed);
+            tabPage4.Controls.Add(EmbossVerticalOnly);
+            tabPage4.Controls.Add(EmbossHorizontalOnly);
+            tabPage4.Controls.Add(label7);
+            tabPage4.Controls.Add(EmbossLossy);
+            tabPage4.Controls.Add(EmbossAllDirections);
+            tabPage4.Controls.Add(EmbossHorizontalVertical);
+            tabPage4.Controls.Add(label5);
+            tabPage4.Controls.Add(label6);
+            tabPage4.Controls.Add(pictureBox8);
+            tabPage4.Controls.Add(button18);
+            tabPage4.Controls.Add(Smooth);
+            tabPage4.Controls.Add(button20);
+            tabPage4.Controls.Add(Emboss);
+            tabPage4.Controls.Add(MeanRemoval);
+            tabPage4.Controls.Add(Sharpen);
+            tabPage4.Controls.Add(GaussianBlur);
+            tabPage4.Controls.Add(pictureBox9);
+            tabPage4.Location = new Point(4, 29);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1129, 493);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Convolution Matrix";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // clearProcessed
+            // 
+            clearProcessed.Location = new Point(858, 366);
+            clearProcessed.Name = "clearProcessed";
+            clearProcessed.Size = new Size(94, 29);
+            clearProcessed.TabIndex = 52;
+            clearProcessed.Text = "Clear";
+            clearProcessed.UseVisualStyleBackColor = true;
+            clearProcessed.Click += clearProcessed_Click;
+            // 
+            // EmbossVerticalOnly
+            // 
+            EmbossVerticalOnly.Location = new Point(588, 446);
+            EmbossVerticalOnly.Name = "EmbossVerticalOnly";
+            EmbossVerticalOnly.Size = new Size(100, 29);
+            EmbossVerticalOnly.TabIndex = 51;
+            EmbossVerticalOnly.Text = "Vertical Only";
+            EmbossVerticalOnly.UseVisualStyleBackColor = true;
+            EmbossVerticalOnly.Click += EmbossVerticalOnly_Click;
+            // 
+            // EmbossHorizontalOnly
+            // 
+            EmbossHorizontalOnly.Location = new Point(459, 446);
+            EmbossHorizontalOnly.Name = "EmbossHorizontalOnly";
+            EmbossHorizontalOnly.Size = new Size(123, 29);
+            EmbossHorizontalOnly.TabIndex = 50;
+            EmbossHorizontalOnly.Text = "Horizontal Only";
+            EmbossHorizontalOnly.UseVisualStyleBackColor = true;
+            EmbossHorizontalOnly.Click += EmbossHorizontalOnly_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(21, 412);
+            label7.Name = "label7";
+            label7.Size = new Size(111, 28);
+            label7.TabIndex = 49;
+            label7.Text = "Embossing:";
+            // 
+            // EmbossLossy
+            // 
+            EmbossLossy.Location = new Point(389, 446);
+            EmbossLossy.Name = "EmbossLossy";
+            EmbossLossy.Size = new Size(64, 29);
+            EmbossLossy.TabIndex = 48;
+            EmbossLossy.Text = "Lossy";
+            EmbossLossy.UseVisualStyleBackColor = true;
+            EmbossLossy.Click += EmbossLossy_Click;
+            // 
+            // EmbossAllDirections
+            // 
+            EmbossAllDirections.Location = new Point(274, 446);
+            EmbossAllDirections.Name = "EmbossAllDirections";
+            EmbossAllDirections.Size = new Size(109, 29);
+            EmbossAllDirections.TabIndex = 47;
+            EmbossAllDirections.Text = "All Directions";
+            EmbossAllDirections.UseVisualStyleBackColor = true;
+            EmbossAllDirections.Click += EmbossAllDirections_Click;
+            // 
+            // EmbossHorizontalVertical
+            // 
+            EmbossHorizontalVertical.Location = new Point(121, 446);
+            EmbossHorizontalVertical.Name = "EmbossHorizontalVertical";
+            EmbossHorizontalVertical.Size = new Size(147, 29);
+            EmbossHorizontalVertical.TabIndex = 46;
+            EmbossHorizontalVertical.Text = "Horizontal Vertical";
+            EmbossHorizontalVertical.UseVisualStyleBackColor = true;
+            EmbossHorizontalVertical.Click += EmbossHorizontalVertical_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(830, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(158, 28);
+            label5.TabIndex = 45;
+            label5.Text = "Processed Image";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(152, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(136, 28);
+            label6.TabIndex = 44;
+            label6.Text = "Loaded Image";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = SystemColors.Control;
+            pictureBox8.Location = new Point(707, 40);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(401, 320);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 43;
+            pictureBox8.TabStop = false;
+            // 
+            // button18
+            // 
+            button18.Location = new Point(997, 448);
+            button18.Name = "button18";
+            button18.Size = new Size(111, 29);
+            button18.TabIndex = 42;
+            button18.Text = "Save Image";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
+            // Smooth
+            // 
+            Smooth.Location = new Point(21, 376);
+            Smooth.Name = "Smooth";
+            Smooth.Size = new Size(94, 29);
+            Smooth.TabIndex = 41;
+            Smooth.Text = "Smooth";
+            Smooth.UseVisualStyleBackColor = true;
+            Smooth.Click += Smooth_Click;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(858, 448);
+            button20.Name = "button20";
+            button20.Size = new Size(133, 29);
+            button20.TabIndex = 40;
+            button20.Text = "Load Image";
+            button20.UseVisualStyleBackColor = true;
+            button20.Click += button20_Click;
+            // 
+            // Emboss
+            // 
+            Emboss.Location = new Point(21, 446);
+            Emboss.Name = "Emboss";
+            Emboss.Size = new Size(94, 29);
+            Emboss.TabIndex = 39;
+            Emboss.Text = "Laplascian";
+            Emboss.UseVisualStyleBackColor = true;
+            Emboss.Click += Emboss_Click;
+            // 
+            // MeanRemoval
+            // 
+            MeanRemoval.Location = new Point(342, 376);
+            MeanRemoval.Name = "MeanRemoval";
+            MeanRemoval.Size = new Size(123, 29);
+            MeanRemoval.TabIndex = 38;
+            MeanRemoval.Text = "Mean Removal";
+            MeanRemoval.UseVisualStyleBackColor = true;
+            MeanRemoval.Click += MeanRemoval_Click;
+            // 
+            // Sharpen
+            // 
+            Sharpen.Location = new Point(242, 376);
+            Sharpen.Name = "Sharpen";
+            Sharpen.Size = new Size(94, 29);
+            Sharpen.TabIndex = 37;
+            Sharpen.Text = "Sharpen";
+            Sharpen.UseVisualStyleBackColor = true;
+            Sharpen.Click += Sharpen_Click;
+            // 
+            // GaussianBlur
+            // 
+            GaussianBlur.Location = new Point(121, 376);
+            GaussianBlur.Name = "GaussianBlur";
+            GaussianBlur.Size = new Size(115, 29);
+            GaussianBlur.TabIndex = 36;
+            GaussianBlur.Text = "Gaussian Blur";
+            GaussianBlur.UseVisualStyleBackColor = true;
+            GaussianBlur.Click += GaussianBlur_Click;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = SystemColors.Control;
+            pictureBox9.Location = new Point(21, 40);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(401, 320);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 35;
+            pictureBox9.TabStop = false;
+            // 
+            // clearProcessed_1
+            // 
+            clearProcessed_1.Location = new Point(855, 361);
+            clearProcessed_1.Name = "clearProcessed_1";
+            clearProcessed_1.Size = new Size(94, 29);
+            clearProcessed_1.TabIndex = 53;
+            clearProcessed_1.Text = "Clear";
+            clearProcessed_1.UseVisualStyleBackColor = true;
+            clearProcessed_1.Click += clearProcessed_1_Click;
             // 
             // Form1
             // 
@@ -466,6 +713,10 @@
             tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
 
@@ -505,5 +756,25 @@
         private Button button15;
         private ComboBox comboBoxCameras;
         private CheckBox checkBox1;
+        private TabPage tabPage4;
+        private Label label5;
+        private Label label6;
+        private PictureBox pictureBox8;
+        private Button button18;
+        private Button Smooth;
+        private Button button20;
+        private Button Emboss;
+        private Button MeanRemoval;
+        private Button Sharpen;
+        private Button GaussianBlur;
+        private PictureBox pictureBox9;
+        private Button EmbossHorizontalVertical;
+        private Button EmbossAllDirections;
+        private Button EmbossLossy;
+        private Label label7;
+        private Button EmbossHorizontalOnly;
+        private Button EmbossVerticalOnly;
+        private Button clearProcessed;
+        private Button clearProcessed_1;
     }
 }
